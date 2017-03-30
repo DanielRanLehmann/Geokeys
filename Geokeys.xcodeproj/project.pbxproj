@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		350477E51E8D8AC100E43989 /* Geokeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 350477E41E8D8AC100E43989 /* Geokeys.m */; };
 		350477E61E8D8AC100E43989 /* Geokeys.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 350477E31E8D8AC100E43989 /* Geokeys.h */; };
+		350477F11E8D8BE600E43989 /* NSString+FormatCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 350477F01E8D8BE600E43989 /* NSString+FormatCoordinates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		350477E01E8D8AC100E43989 /* libGeokeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGeokeys.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		350477E31E8D8AC100E43989 /* Geokeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geokeys.h; sourceTree = "<group>"; };
 		350477E41E8D8AC100E43989 /* Geokeys.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geokeys.m; sourceTree = "<group>"; };
+		350477EF1E8D8BE600E43989 /* NSString+FormatCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FormatCoordinates.h"; sourceTree = "<group>"; };
+		350477F01E8D8BE600E43989 /* NSString+FormatCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FormatCoordinates.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				350477E31E8D8AC100E43989 /* Geokeys.h */,
 				350477E41E8D8AC100E43989 /* Geokeys.m */,
+				350477EF1E8D8BE600E43989 /* NSString+FormatCoordinates.h */,
+				350477F01E8D8BE600E43989 /* NSString+FormatCoordinates.m */,
 			);
 			path = Geokeys;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				350477E51E8D8AC100E43989 /* Geokeys.m in Sources */,
+				350477F11E8D8BE600E43989 /* NSString+FormatCoordinates.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
