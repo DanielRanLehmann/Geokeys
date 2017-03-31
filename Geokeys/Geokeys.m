@@ -19,13 +19,10 @@
 @implementation Geokeys
 
 #pragma mark - Initializer
+
 - (instancetype)init {
-    self = [super init];
-    if (self) {
-        // NSAssert, you have to be authorized to use the geoservice, create an account here.: do a hand over to a URL for the given sign up flow .
-    }
-    
-    return self;
+    NSAssert(false, @"You have to be authorized to use this service. Please use -initWithLogin, instead");
+    return nil;
 }
 
 - (instancetype)initWithLogin:(NSString *)login password:(NSString *)password {
@@ -78,14 +75,14 @@
     [dataTask resume];
 }
 
-- (void)transformCoordinates:(NSArray *)coordinates fromEPSG:(NSUInteger)fromEPSG toEPSG:(NSUInteger)toEPSG completionHandler:(void (^)(NSError *error, id response))handler {
+- (void)transformCoordinates:(NSArray *)coordinates fromEPSG:(EPSG)fromEPSG toEPSG:(EPSG)toEPSG completionHandler:(void (^)(NSError *error, id response))handler {
     
     NSDictionary *params = @{@"ingeop" : [NSString stringWithFormattedCoordinates:coordinates],
-                             @"ingeoref" : [NSString stringWithFormat:@"EPSG:%lu", fromEPSG],
-                             @"outgeoref" : [NSString stringWithFormat:@"EPSG:%lu", toEPSG]
+                             @"ingeoref" : NSStringFromEPSG(fromEPSG),
+                             @"outgeoref" : NSStringFromEPSG(toEPSG)
                              };
     
-    [self GET:GKTransformCoordinates parameters:params completionHandler:^(NSError *error, id response) {
+    [self GET:GKCoordinateTransformation parameters:params completionHandler:^(NSError *error, id response) {
         handler(error, response);
     }];
 }
@@ -177,7 +174,7 @@
             name = @"hoejde";
             break;
             
-        case GKTransformCoordinates:
+        case GKCoordinateTransformation:
             name = @"koortrans";
             break;
     }

@@ -10,6 +10,7 @@
 
 @implementation NSString (FormatCoordinates)
 
+// support cllocationcoordinate struct as well?
 + (NSString *)stringWithFormattedCoordinates:(NSArray *)coordinates {
     
     NSMutableString *coordPairs = [NSMutableString string];

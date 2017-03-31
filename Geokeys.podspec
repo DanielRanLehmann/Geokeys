@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Geokeys"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "This is not yet to be used, please disregard for now."
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/DanielRanLehmann/Geokeys.git", :commit => "c1862929a8e32bdf7a6e12d8359ca8abf0eb2496" }
+  s.source       = { :git => "https://github.com/DanielRanLehmann/Geokeys.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
